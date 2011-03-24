@@ -87,22 +87,25 @@ class MainHandler(webapp.RequestHandler):
 		elif(browsername=='ie'):
 			font_type='eot'
 		
+		#not supported on mac
+		if(mac_os()):
+			font_type=""
+		
+		
 		#check and forece Masterpiece if OS is apple related
 		if(browsername=='iPhone' or browsername=='iPad'):
 			font_family="Masterpiece Uni Sans"
 			font_file="masterpiece"
 			font_type="ttf"
-		
-		#not supported on mac
-		if(mac_os()):
-			font_type=""
-		
+			
 		#zawgyi font support all browser
 		if(self.request.get("font").lower()=='zawgyi'):
 			font_family="Zawgyi-One"
+			font_file="zawgyi"
 			font_type="ttf"
 		if(self.request.get("font").lower()=='zawgyi' and browsername=='ie'):
 			font_family="Zawgyi-One"
+			font_file="zawgyi"
 			font_type="eot"					
 		
 		#check font type to load or not. Unicode font can't load in Android and chrome
