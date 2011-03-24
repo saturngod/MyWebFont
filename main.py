@@ -82,7 +82,7 @@ class MainHandler(webapp.RequestHandler):
 		font_type=""
 		
 		#check browser .. Myanmar Unicode Font Embed only work on firefox, opera and ie
-		if(browsername=='firefox' or browsername=='opera'):
+		if(browsername=='firefox' or browsername=='opera' or browsername=='chrome' ):
 			font_type='ttf'
 		elif(browsername=='ie'):
 			font_type='eot'
@@ -103,6 +103,7 @@ class MainHandler(webapp.RequestHandler):
 			font_family="Zawgyi-One"
 			font_file="zawgyi"
 			font_type="ttf"
+			
 		if(self.request.get("font").lower()=='zawgyi' and browsername=='ie'):
 			font_family="Zawgyi-One"
 			font_file="zawgyi"
