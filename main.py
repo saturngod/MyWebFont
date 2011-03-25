@@ -93,7 +93,7 @@ class MainHandler(webapp.RequestHandler):
 		
 		
 		#check and forece Masterpiece if OS is apple related
-		if(browsername=='iPhone' or browsername=='iPad'):
+		if(browsername=='iPhone' or browsername=='iPad' or (mac_os() and browsername=='safari')):
 			font_family="Masterpiece Uni Sans"
 			font_file="masterpiece"
 			font_type="ttf"

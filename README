@@ -1,0 +1,12 @@
+MyWebFont is design for embed Myanmar Unicode Font and Zawgyi. Myanmar Unicode have a problem and most of the font can't render on Mac , iphone , ipad. iOS allow font embed and AAT is need for font rendering. Most of the unicode are not include AAT and Masterpiece is a only way.
+
+MyWebFont can detect OS version and browser version. IE8 or lower version are using EOT and can't use TTF for font embed. MyWebFont also solve the IE problem , also. MyWebFont source is using MIT license and you can use freely in everywhere.
+
+Available font are
+
+ 1. Yunghkio
+ 1. Myanmar3
+ 1. Padauk
+ 1. Parabaik
+ 1. Zawgyi-One
+
