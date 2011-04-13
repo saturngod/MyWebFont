@@ -34,23 +34,23 @@ class HomeHandler(webapp.RequestHandler):
 					<h1>CSS link</h1>
 					<h2>Yunghkio</h2>
 					<code>
-						&lt;link href='http://mywebfont.appspot.com/css?font=yunghkio' rel='stylesheet' type='text/css'&gt;
+						&lt;link href='http://mywebfont.appspot.com/css?font=yunghkio' rel='stylesheet' type='text/css'/&gt;
 					</code>
 					<h2>Myanmar3</h2>
 					<code>
-						&lt;link href='http://mywebfont.appspot.com/css?font=myanmar3' rel='stylesheet' type='text/css'&gt;
+						&lt;link href='http://mywebfont.appspot.com/css?font=myanmar3' rel='stylesheet' type='text/css/'&gt;
 					</code>
 					<h2>Padauk</h2>
 					<code>
-						&lt;link href='http://mywebfont.appspot.com/css?font=padauk' rel='stylesheet' type='text/css'&gt;
+						&lt;link href='http://mywebfont.appspot.com/css?font=padauk' rel='stylesheet' type='text/css'/&gt;
 					</code>
 					<h2>Parabaik</h2>
 					<code>
-						&lt;link href='http://mywebfont.appspot.com/css?font=parabaik' rel='stylesheet' type='text/css'&gt;
+						&lt;link href='http://mywebfont.appspot.com/css?font=parabaik' rel='stylesheet' type='text/css'/&gt;
 					</code>
 					<h2>Zawgyi-One</h2>
 					<code>
-						&lt;link href='http://mywebfont.appspot.com/css?font=zawgyi' rel='stylesheet' type='text/css'&gt;
+						&lt;link href='http://mywebfont.appspot.com/css?font=zawgyi' rel='stylesheet' type='text/css'/&gt;
 					</code>
 					
 					<h1>Need to do </h1>
@@ -58,6 +58,11 @@ class HomeHandler(webapp.RequestHandler):
 					<code>
 						h1 { font-family:"Masterpiece Uni Sans",Yunghkio,Myanmar3}
 					</code>
+					
+					<h1>Sample</h1>
+					<iframe style="width: 100%; height: 300px" src="http://jsfiddle.net/saturngod/9b2DW/embedded/"></iframe>
+					
+					<h1>Other</h1>
 					<blockquote>
 						I recommend to start with Masterpiece Uni Sans.It's for some peple who use iOS or Mac. Mac and iOS can use Masterpiece only. So, please start with <span style='color:red'>"Masterpiece Uni Sans"</span>.
 					</blockquote>
