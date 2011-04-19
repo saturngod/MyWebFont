@@ -75,12 +75,16 @@ class MainHandler(webapp.RequestHandler):
 		font_family="Master Piece Uni Sans"
 		font_file=self.request.get("font").lower();
 		if(self.request.get("font").lower()=='yunghkio'):
+			font_file="yunghkio"
 			font_family="Yunghkio"
 		elif(self.request.get("font").lower()=='myanmar3'):
+			font_file="myanmar3"
 			font_family="Myanmar3"
 		elif(self.request.get("font").lower()=='padauk'):
+			font_file="paduck"
 			font_family="Padauk"
 		elif(self.request.get("font").lower()=='parabaik'):
+			font_file="parabaik"
 			font_family="Parabaik"
 		
 		browsername=Getbrowsername()
