@@ -18,57 +18,6 @@ from google.appengine.ext import webapp
 from google.appengine.ext.webapp import util
 import os
 
-class HomeHandler(webapp.RequestHandler):
-    def get(self):
-		self.response.out.write("""
-			<html>
-				<head>
-					<title>Myanmar Web Font</title>
-				</head>
-				<body>
-					<p>Supported Unicode Fonts are 
-					Yunghkio, Myanmar3 , Paduk, Parabaik.
-					</p>
-					<p>Also support Zawgyi-One</p>
-					
-					<h1>CSS link</h1>
-					<h2>Yunghkio</h2>
-					<code>
-						&lt;link href='http://mywebfont.appspot.com/css?font=yunghkio' rel='stylesheet' type='text/css'/&gt;
-					</code>
-					<h2>Myanmar3</h2>
-					<code>
-						&lt;link href='http://mywebfont.appspot.com/css?font=myanmar3' rel='stylesheet' type='text/css/'&gt;
-					</code>
-					<h2>Padauk</h2>
-					<code>
-						&lt;link href='http://mywebfont.appspot.com/css?font=padauk' rel='stylesheet' type='text/css'/&gt;
-					</code>
-					<h2>Parabaik</h2>
-					<code>
-						&lt;link href='http://mywebfont.appspot.com/css?font=parabaik' rel='stylesheet' type='text/css'/&gt;
-					</code>
-					<h2>Zawgyi-One</h2>
-					<code>
-						&lt;link href='http://mywebfont.appspot.com/css?font=zawgyi' rel='stylesheet' type='text/css'/&gt;
-					</code>
-					
-					<h1>Need to do </h1>
-					You need to declare font-family in CSS like following
-					<code>
-						h1 { font-family:"Masterpiece Uni Sans",Yunghkio,Myanmar3}
-					</code>
-					
-					<h1>Sample</h1>
-					<iframe style="width: 100%; height: 300px" src="http://jsfiddle.net/saturngod/9b2DW/embedded/"></iframe>
-					
-					<h1>Other</h1>
-					<blockquote>
-						I recommend to start with Masterpiece Uni Sans.It's for some peple who use iOS or Mac. Mac and iOS can use Masterpiece only. So, please start with <span style='color:red'>"Masterpiece Uni Sans"</span>.
-					</blockquote>
-				</body>
-			</html>
-		""")
 class MainHandler(webapp.RequestHandler):
     def get(self):
 		#check font name
@@ -81,7 +30,7 @@ class MainHandler(webapp.RequestHandler):
 			font_file="myanmar3"
 			font_family="Myanmar3"
 		elif(self.request.get("font").lower()=='padauk'):
-			font_file="paduck"
+			font_file="padauk"
 			font_family="Padauk"
 		elif(self.request.get("font").lower()=='parabaik'):
 			font_file="parabaik"
@@ -159,7 +108,7 @@ def mac_os():
 	return False
 			
 def main():
-    application = webapp.WSGIApplication([('/',HomeHandler),('/css', MainHandler)],
+    application = webapp.WSGIApplication([('/css', MainHandler)],
                                          debug=True)
     util.run_wsgi_app(application)
 

@@ -6,6 +6,10 @@ api_version: 1
 handlers:
 - url: /font/.*
   script: font.py
-    
+
+- url: /
+  static_files: html/index.html
+  upload: static_files
+  
 - url: .*
   script: main.py
