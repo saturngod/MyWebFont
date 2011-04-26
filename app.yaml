@@ -7,9 +7,8 @@ handlers:
 - url: /font/.*
   script: font.py
 
-- url: /
-  static_files: html/index.html
-  upload: static_files
+- url: /stylesheets
+  static_dir: stylesheets
   
 - url: .*
   script: main.py

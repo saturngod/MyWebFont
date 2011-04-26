@@ -16,7 +16,16 @@
 #
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp import util
+from google.appengine.ext.webapp import template
 import os
+
+class HomeHandler(webapp.RequestHandler):
+	def get(self):
+		template_value={
+			'title':'Myanmar Web Font by saturngod'
+		}
+		path=os.path.join(os.path.dirname(__file__),'view/index.html')
+		self.response.out.write(template.render(path,template_value))
 
 class MainHandler(webapp.RequestHandler):
     def get(self):
@@ -108,7 +117,7 @@ def mac_os():
 	return False
 			
 def main():
-    application = webapp.WSGIApplication([('/css', MainHandler)],
+    application = webapp.WSGIApplication([('/', HomeHandler),('/css', MainHandler)],
                                          debug=True)
     util.run_wsgi_app(application)
 
