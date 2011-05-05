@@ -19,6 +19,7 @@ from google.appengine.ext.webapp import util
 from google.appengine.ext.webapp import template
 import os
 
+
 class HomeHandler(webapp.RequestHandler):
 	def get(self):
 		template_value={
@@ -49,7 +50,7 @@ class MainHandler(webapp.RequestHandler):
 		font_type=""
 		
 		#check browser .. Myanmar Unicode Font Embed only work on firefox, opera and ie
-		if(browsername=='firefox' or browsername=='opera' or browsername=='chrome' ):
+		if(browsername=='firefox' or browsername=='opera'):
 			font_type='ttf'
 		elif(browsername=='ie'):
 			font_type='eot'
