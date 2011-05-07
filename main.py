@@ -90,8 +90,7 @@ class MainHandler(webapp.RequestHandler):
 				css+="url('"+font_path+"');\n}"
 			else:
 				css+="\nsrc:url('"+font_path+"');"
-				css+="\nsrc:local('"+font_family+"');\n}"
-				
+				css+="\n}"
 			self.response.headers["Access-Control-Allow-Origin"] = "*"
 			self.response.headers["Content-Type"] = "text/css"
 			self.response.out.write(css)
