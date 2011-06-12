@@ -81,7 +81,6 @@ class MainHandler(webapp.RequestHandler):
             font_family="Zawgyi-One"
             font_file="zawgyi"
             font_type="eot"
-            
         
         #check font type to load or not. Unicode font can't load in Android and chrome
         if(font_type!=""):
