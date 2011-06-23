@@ -66,7 +66,7 @@ class MainHandler(webapp.RequestHandler):
             font_file="masterpiece"
             font_type="ttf"
         
-        if(mac_os() and browsername=='chrome'):
+        if(browsername=='chrome'):
             font_family="Myanmar3"
             font_file="myanmar3"
             font_type="ttf"
