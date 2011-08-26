@@ -47,30 +47,27 @@ class MainHandler(webapp.RequestHandler):
             font_family="Parabaik"
         
         browsername=Getbrowsername()
-        font_type=""
+        font_type="ttf"
         
         #check browser .. Myanmar Unicode Font Embed only work on firefox, opera and ie
-        if(browsername=='firefox' or browsername=='opera'):
-            font_type='ttf'
-        elif(browsername=='ie'):
+        if(browsername=='ie'):
             font_type='eot'
         
-        #not supported on mac
-        if(mac_os()):
-            font_type=""
-        
+        if(browsername=="chrome" and mac_os()):
+            font_file="myanmar3"
+            font_family="Myanmar3"
         
         #check and forece Masterpiece if OS is apple related
-        if(browsername=='iPhone' or browsername=='iPad' or (mac_os() and browsername=='safari')):
-            font_family="Masterpiece Uni Sans"
-            font_file="masterpiece"
+        if(browsername=='iPhone' or browsername=='iPad' and (self.request.get("font").lower()!='yunghkio' and self.request.get("font").lower()!='myanmar3')):
+            font_family="Yunghkio"
+            font_file="yunghkio"
             font_type="ttf"
         
-        if(browsername=='chrome'):
-            font_family="Myanmar3"
-            font_file="myanmar3"
+        if(mac_os() and (font_file=="padauk" or font_file=="parabaik")):
+            font_family="Yunghkio"
+            font_file="yunghkio"
             font_type="ttf"
-            
+
         #zawgyi font support all browser
         if(self.request.get("font").lower()=='zawgyi'):
             font_family="Zawgyi-One"
