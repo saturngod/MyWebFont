@@ -6,10 +6,16 @@
 		<link rel="stylesheet" href="/stylesheets/bootstrap-1.1.0.min.css">
 		<link rel="stylesheet" href="/stylesheets/style.css">
         <link rel="stylesheet" href="/stylesheets/prettify.css">
-        <link rel="stylesheet" href="http://mywebfont.appspot.com/css?font=yunghkio" type="text/css" media="screen" title="yunghkio" charset="utf-8">
-        <link rel="stylesheet" href="http://mywebfont.appspot.com/css?font=myanmar3" type="text/css" media="screen" title="yunghkio" charset="utf-8">
-        <link rel="stylesheet" href="http://mywebfont.appspot.com/css?font=padauk" type="text/css" media="screen" title="yunghkio" charset="utf-8">
-        <link rel="stylesheet" href="http://mywebfont.appspot.com/css?font=zawgyi" type="text/css" media="screen" title="yunghkio" charset="utf-8">
+
+        <link rel="stylesheet" href="/css?font=yunghkio" type="text/css" media="screen" title="yunghkio" charset="utf-8">
+
+        <link rel="stylesheet" href="/css?font=myanmar3" type="text/css" media="screen" title="yunghkio" charset="utf-8">
+
+        <link rel="stylesheet" href="/css?font=padauk" type="text/css" media="screen" title="yunghkio" charset="utf-8">
+
+        <link rel="stylesheet" href="/css?font=mymyanmar" type="text/css" media="screen" title="yunghkio" charset="utf-8">
+
+        <link rel="stylesheet" href="/css?font=zawgyi" type="text/css" media="screen" title="yunghkio" charset="utf-8">
         
         <script src="/js/prettify.js"></script>
         <script src="/js/jquery.js"></script>
@@ -56,7 +62,7 @@
               <div class="row">
                 <div class="span6 columns">
                   <h3>History</h3>
-                  <p>Around March 2011 , Myanmar Unicode were ready and blowing up for the blog. However, most of the blogger face the problem with font embed. Most of the cyber cafe didn't install the unicode font. Myanmar 3 , Yunghkio were not universal font at this time. For Mac and iOS , we need to use Master Pieces Uni Sans.</p>
+                  <p>Around March 2011 , Myanmar Unicode were ready and blowing up for the blog. However, most of the blogger face the problem with font embed. Most of the cyber cafe didn't install the unicode font. Myanmar 3 is not universal font at this time. For Mac and iOS , we need to use Masterpiece Uni Sans.</p>
                   <p>Some of the bloggers wanted to change the unicode. However, they don't know about the font embed technology. So, I created the mywebfont for all of the myanmar unicode websites. Now, mywebfont has <strong>0.7 requested per second</strong> in everyday.</p>
                   <p>Read more on <a href="http://www.saturngod.net/knowledgebase/myanmar-web-font">saturngod.net ›</a></p>
                 </div>
@@ -97,6 +103,7 @@
                     <ul>
                         <li>Myanmar3 (<a href="http://myanmarnlp.org.mm/">Myanmar NLP</a>)</li>
                         <li>Yunghkio (<a href="hhttp://www.yunghkio.com/unicode">Sai Di</a>)</li>
+                        <li>MyMyanmar(<a href="http://www.mymyanmar.net">MyMyanmar</a>)</li>
                         <li>Padauk (<a href="http://www.thanlwinsoft.org/ThanLwinSoft/MyanmarUnicode/Fonts/Padauk.php">thanlwinsoft</a>)</li>
                         <li>Zawgyi (<a href="http://www.zawgyi.net">Zawgyi Group</a>)</li>
                     </ul>
@@ -108,6 +115,10 @@
                     <p><strong>Myanmar3</strong> (<a href="http://myanmarnlp.org.mm/">Myanmar NLP</a>)</p>
                     <p class="myanmar3">မြန်မာစာသည် တို့စာ။</p>
                     <br/>
+                    <p><strong>MyMyanmar Universal Font</strong> (<a href="http://www.mymyanmar.net/">MyMyanmar</a>)</p>
+                    <p class="mymyanmar">မြန်မာစာသည် တို့စာ။</p>
+                    <br/>
+                    
                     <p><strong>Yunghkio</strong> (<a href="hhttp://www.yunghkio.com/unicode">Sai Di</a>)</p>
                     <p class="yunghkio">မြန်မာစာသည် တို့စာ။</p>
                     <br/>
@@ -133,6 +144,7 @@
                         <option selected="selected" value="myanmar3">Myanmar3</option>
                         <option value="yunghkio">Yunghkio</option>
                         <option value="padauk">Padauk</option>
+                        <option value="mymyanmar">MyMyanmar</option>
                         <option value="zawgyi">Zawgyi-One</option>
                         </select>
                     </form>
@@ -247,16 +259,16 @@
 	      
 	      font_family="";
 	      if($(this).val()=="myanmar3") {
-	          font_family="Myanmar3,Yunghkio";
+	          font_family="Myanmar3,Yunghkio,'Masterpiece Uni Sans'";
 	      }
 	      else if($(this).val()=="yunghkio") {
-	          font_family="Yunghkio,Myanmar3";
+	          font_family="Yunghkio,Myanmar3,'Masterpiece Uni Sans'";
           }
           else if($(this).val()=="padauk") {
-              font_family="Padauk,Yunghkio,Myanmar3";
+              font_family="padauk,Yunghkio,Myanmar3,'Masterpiece Uni Sans'";
           }
-          else if($(this).val()=="parabaik") {
-              font_family="Parabaik,Yunghkio,Myanmar3";
+          else if($(this).val()=="mymyanmar") {
+                font_family="'MyMyanmar Universal',Myanmar3,Yunghkio,'Masterpiece Uni Sans'";
           }
           else if($(this).val()=="zawgyi") {
               font_family="Zawgyi-One"

@@ -42,9 +42,9 @@ class MainHandler(webapp.RequestHandler):
         elif(self.request.get("font").lower()=='padauk'):
             font_file="padauk"
             font_family="Padauk"
-        elif(self.request.get("font").lower()=='parabaik'):
-            font_file="parabaik"
-            font_family="Parabaik"
+        elif(self.request.get("font").lower()=='mymyanmar'):
+            font_file="MyMMUnicodeUniversal"
+            font_family="MyMyanmar Universal"
         
         browsername=Getbrowsername()
         font_type="ttf"
@@ -58,14 +58,14 @@ class MainHandler(webapp.RequestHandler):
             font_family="Myanmar3"
         
         #check and forece Masterpiece if OS is apple related
-        if(browsername=='iPhone' or browsername=='iPad' and (self.request.get("font").lower()!='yunghkio' and self.request.get("font").lower()!='myanmar3')):
-            font_family="Yunghkio"
-            font_file="yunghkio"
+        if(browsername=='iPhone' or browsername=='iPad' and self.request.get("font").lower()!='myanmar3'):
+            font_family="Masterpiece Uni Sans"
+            font_file="masterpiece"
             font_type="ttf"
         
-        if(mac_os() and (font_file=="padauk" or font_file=="parabaik")):
-            font_family="Yunghkio"
-            font_file="yunghkio"
+        if(mac_os() and (font_file=="padauk" or font_file=="yunghkio")):
+            font_family="Masterpiece Uni Sans"
+            font_file="masterpiece"
             font_type="ttf"
 
         #zawgyi font support all browser
