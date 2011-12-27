@@ -32,6 +32,7 @@
                     <li class="menu_click"><a href="#supported">Supported Font</a></li>
                     <li class="menu_click"><a href="#how-to-use">How to use</a></li>
                     <li class="menu_click"><a href="#plugins">Plugins</a></li>
+                    <li class="menu_click"><a href="https://github.com/saturngod/MyWebFont" target="_blank">Sourcecode At Github</a></li>
                   </ul>
                 </div>
             </div>
@@ -98,14 +99,13 @@
               <div class="row">
                 <div class="span4 columns">
                     <h2>Supported Font</h2>
-                    <p>MyWebFont supported OFL license font. I can't support if license don't allow to support font embed.</p>
-                    <p>MyWebFont support following list</p>
+                    <p>MyWebFont support following font list.
                     <ul>
-                        <li>Myanmar3 (<a href="http://myanmarnlp.org.mm/">Myanmar NLP</a>)</li>
-                        <li>Yunghkio (<a href="hhttp://www.yunghkio.com/unicode">Sai Di</a>)</li>
-                        <li>MyMyanmar(<a href="http://www.mymyanmar.net">MyMyanmar</a>)</li>
-                        <li>Padauk (<a href="http://www.thanlwinsoft.org/ThanLwinSoft/MyanmarUnicode/Fonts/Padauk.php">thanlwinsoft</a>)</li>
-                        <li>Zawgyi (<a href="http://www.zawgyi.net">Zawgyi Group</a>)</li>
+                        <li>Myanmar3 from (<a href="http://myanmarnlp.org.mm/">Myanmar NLP</a>)</li>
+                        <li>Yunghkio from (<a href="http://www.yunghkio.com/unicode">Sai Di</a>)</li>
+                        <li>MyMyanmar from (<a href="http://www.mymyanmar.net">MyMyanmar</a>)</li>
+                        <li>Padauk from (<a href="http://www.thanlwinsoft.org/ThanLwinSoft/MyanmarUnicode/Fonts/Padauk.php">thanlwinsoft</a>)</li>
+                        <li>Zawgyi from (<a href="http://www.zawgyi.net">Zawgyi Group</a>)</li>
                     </ul>
                     <p>If your font is using OFL license and want to embed on MyWebFont , <a href="mailto:saturngod@gmail.com">contact me</a></p>
                 </div>
@@ -119,7 +119,7 @@
                     <p class="mymyanmar">မြန်မာစာသည် တို့စာ။</p>
                     <br/>
                     
-                    <p><strong>Yunghkio</strong> (<a href="hhttp://www.yunghkio.com/unicode">Sai Di</a>)</p>
+                    <p><strong>Yunghkio</strong> (<a href="http://www.yunghkio.com/unicode">Sai Di</a>)</p>
                     <p class="yunghkio">မြန်မာစာသည် တို့စာ။</p>
                     <br/>
                     <p><strong>Padauk</strong> (<a href="http://www.thanlwinsoft.org/ThanLwinSoft/MyanmarUnicode/Fonts/Padauk.php">thanlwinsoft</a>)</p>
@@ -252,7 +252,7 @@
 	      return false;
 	   });
 	   
-	   $(".fontselect").click(function(){
+	   $(".fontselect").change(function(){
 	      
 	      $("#codeNormal").html("&lt;link href='http://mywebfont.appspot.com/css?font="+$(this).val()+"' rel='stylesheet' type='text/css'/&gt;");
 	      $("#codeImport").html("@import url('http://mywebfont.appspot.com/css?font="+$(this).val()+"');");

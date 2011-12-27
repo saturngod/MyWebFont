@@ -67,6 +67,12 @@ class MainHandler(webapp.RequestHandler):
             font_family="Masterpiece Uni Sans"
             font_file="masterpiece"
             font_type="ttf"
+        
+        #for android unicode, masterpiece is better
+        if(browsername=="android" and self.request.get("font").lower()!='zawgyi'):
+            font_family="Masterpiece Uni Sans"
+            font_file="masterpiece"
+            font_type="ttf"
 
         #zawgyi font support all browser
         if(self.request.get("font").lower()=='zawgyi'):
@@ -91,7 +97,7 @@ class MainHandler(webapp.RequestHandler):
             if(browsername!='ie'):
                 css+="url('"+font_path+"');\n}"
             else:
-                css+="\nsrc:url('"+font_path+"');"
+                css+="\nsrc:url('"+font_path+"')\9;"
                 css+="\n}"
             self.response.headers["Access-Control-Allow-Origin"] = "*"
             self.response.headers["Content-Type"] = "text/css"
@@ -110,6 +116,8 @@ def Getbrowsername():
 		return "firefox"
 	elif(os.environ['HTTP_USER_AGENT'].find('Opera')!=-1):
 		return "opera"
+	elif(os.environ['HTTP_USER_AGENT'].find('MSIE')!=-1):
+		return "ie"
 	elif(os.environ['HTTP_USER_AGENT'].find('MSIE')!=-1):
 		return "ie"
 
