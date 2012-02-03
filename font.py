@@ -14,7 +14,7 @@ class FontFile(webapp.RequestHandler):
   EXT_TYPES = {
       '.otf': 'application/x-font-otf',
       '.ttf': 'application/x-font-ttf',
-      '.eot': 'application/vnd.ms-fontobject',
+      '.eot': 'application/octet-stream',
       '.svg': 'image/svg+xml',
       '.js': 'application/x-javascript',
       '.woff': 'application/octet-stream',

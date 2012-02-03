@@ -97,7 +97,7 @@ class MainHandler(webapp.RequestHandler):
             if(browsername!='ie'):
                 css+="url('"+font_path+"');\n}"
             else:
-                css+="\nsrc:url('"+font_path+"')\9;"
+                css+="\nsrc:url('"+font_path+"?') format('embedded-opentype');"
                 css+="\n}"
             self.response.headers["Access-Control-Allow-Origin"] = "*"
             self.response.headers["Content-Type"] = "text/css"
@@ -116,8 +116,8 @@ def Getbrowsername():
 		return "firefox"
 	elif(os.environ['HTTP_USER_AGENT'].find('Opera')!=-1):
 		return "opera"
-	elif(os.environ['HTTP_USER_AGENT'].find('MSIE')!=-1):
-		return "ie"
+	elif(os.environ['HTTP_USER_AGENT'].find('Android')!=-1):
+		return "android"
 	elif(os.environ['HTTP_USER_AGENT'].find('MSIE')!=-1):
 		return "ie"
 
