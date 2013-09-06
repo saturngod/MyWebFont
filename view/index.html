@@ -27,23 +27,27 @@
 
   <!-- Github ribbon -->
   <a href="https://github.com/saturngod/MyWebFont"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 1031" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
-
-
+  
   <!-- Nav bar start -->
-    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <!-- <h4><a href="#">MyWebFont</a></li> -->
-        <a class="navbar-brand" href="#">MyWebFont</a>
-        <ul class="nav navbar-nav">
-          <li class="active menu_click"><a href="#masthead">Overview</a></li>
-          <li class="menu_click"><a href="#about">About</a></li>
-          <li class="menu_click"><a href="#supported">Supported Font</a></li>
-          <li class="menu_click"><a href="#how-to-use">How to use</a></li>
-          <li class="menu_click"><a href="#plugins">Plugins</a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
+  <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+  <div class="container">
+
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+
+                  <a class="navbar-brand" href="#">MyWebFont</a>
+          <ul class="nav navbar-nav">
+            <li class="active menu_click"><a href="#masthead">Overview</a></li>
+            <li class="menu_click"><a href="#about">About</a></li>
+            <li class="menu_click"><a href="#supported">Supported Font</a></li>
+            <li class="menu_click"><a href="#how-to-use">How to use</a></li>
+            <li class="menu_click"><a href="#plugins">Plugins</a></li>
+          </ul>
+      </ul>
     </nav>
+  </div>
+</header>
+
     <!-- Nav bar end -->
 
         <!-- Masthead (blueprinty thing)
@@ -61,7 +65,6 @@
         </div>
 
 	    <div class="container">
-
 	        <!-- About Section
 	        ============================== -->
             <section id="about">
@@ -69,14 +72,14 @@
                 <h1>About MyWebFont <small>Brief history, browser support, and more</small></h1>
               </div>
               <div class="row">
-                <div class="span6 columns">
+                <div class="col-xs-6">
                   <h3>History</h3>
                   <p>Around March 2011 , Myanmar Unicode were ready and blowing up for the blog. However, most of the blogger face the problem with font embed. Most of the cyber cafe didn't install the unicode font. Myanmar 3 is not universal font at this time. For Mac and iOS , we need to use Masterpiece Uni Sans.</p>
                   <p>Some of the bloggers wanted to change the unicode. However, they don't know about the font embed technology. So, I created the mywebfont for all of the myanmar unicode websites. Now, mywebfont has <strong>0.7 requested per second</strong> in everyday.</p>
                   <p>Read more on <a href="http://blog.saturngod.net/knowledgebase/myanmar-web-font">saturngod.net ›</a></p>
                 </div>
 
-                <div class="span5 columns">
+                <div class="col-xs-3">
                   <h3>Browser support</h3>
                   <p>MyWebFont is tested and supported in major modern browsers like Chrome, Safari, iOS, Internet Explorer, and Firefox.</p>
                   <ul>
@@ -87,7 +90,7 @@
                   </ul>
                 </div>
 
-                <div class="span5 columns">
+                <div class="col-xs-3">
                   <h3>The Problem</h3>
                   <p>MyWebFont can't support on Opera and Android. Opera supported font embed but it can't render myanmar unicode font rendering when font embed. Android still have a problem with myanmar unicode.</p>
                   <ul style="list-style:none">
@@ -99,13 +102,13 @@
               </div> <!-- /row -->
             </section>
 
-
+            <!-- Supported MyWebFont start -->
             <section id="supported">
               <div class="page-header">
                 <h1>Supported MyWebFont <small>MyWebFont supported OFL and font embed allow license font</small></h1>
               </div>
               <div class="row">
-                <div class="span4 columns">
+                <div class="col-xs-4">
                     <h2>Supported Font</h2>
                     <p>MyWebFont support following font list.
                     <ul>
@@ -117,7 +120,7 @@
                     </ul>
                     <p>If your font is using OFL license and want to embed on MyWebFont , <a href="mailto:saturngod@gmail.com">contact me</a></p>
                 </div>
-                <div class="span12 columns">
+                <div class="col-xs-8 columns">
                     <h3>Font Face</h3>
                     <br/>
                     <p><strong>Myanmar3</strong> (<a href="http://myanmarnlp.org.mm/">Myanmar NLP</a>)</p>
@@ -138,32 +141,34 @@
                 </div>
               </div><!-- /row -->
             </section>
+            <!-- Supported MyWebFont end -->
 
+            <!-- How to use start -->
             <section id="how-to-use">
               <div class="page-header">
                 <h1>How to use <small>add external stylesheet in your header and change font family</small></h1>
               </div>
               <div class="row">
-                <div class="span4 columns">
-                    <h2>Choose Font</h2>
-                    <div class="input">
-                    <form>
-                        <select class="fontselect">
-                        <option selected="selected" value="myanmar3">Myanmar3</option>
-                        <option value="yunghkio">Yunghkio</option>
-                        <option value="padauk">Padauk</option>
-                        <option value="mymyanmar">MyMyanmar</option>
-                        <option value="zawgyi">Zawgyi-One</option>
-                        </select>
-                    </form>
-                    </div>
+                <div class="col-xs-4">
+                  <h2>Choose Font</h2>
+                  <div class="input">
+                  <form>
+                      <select class="fontselect form-control">
+                      <option selected="selected" value="myanmar3">Myanmar3</option>
+                      <option value="yunghkio">Yunghkio</option>
+                      <option value="padauk">Padauk</option>
+                      <option value="mymyanmar">MyMyanmar</option>
+                      <option value="zawgyi">Zawgyi-One</option>
+                      </select>
+                  </form>
+                  </div>
                 </div>
-                <div class="span12 columns">
+                <div class="col-xs-8">
                     <h3>Codes</h3>
-                    <ul class="tabs">
-                            <li class="active tabs_code" id="standard_click"><a href="#">Standard</a></li>
-                            <li class="tabs_code" id="import_click"><a href="#">@import</a></li>
-                    </ul>
+                    <ul  class="nav nav-tabs">
+                      <li class="active tabs_code" id="standard_click"><a href="#">Standard</a></li>
+                      <li class="tabs_code" id="import_click"><a href="#">@import</a></li>
+                    </ul></br>
 
                     <pre class="prettyprint linenums" id="codeNormal">&lt;link href='http://mywebfont.appspot.com/css?font=myanmar3' rel='stylesheet' type='text/css'/&gt;</pre>
                     <pre class="prettyprint linenums" id="codeImport">@import url('http://mywebfont.appspot.com/css?font=myanmar3');</pre>
@@ -171,19 +176,17 @@
                     <h3>Font Family</h3>
                     <p>Add following code in stylesheet font family.</p>
                     <pre class="prettyprint linenums" id="fontfamily">font-family:Myanmar3,Yunghkio;</pre>
-
-
-
                 </div>
             </div> <!-- /row -->
         </section>
+        <!-- How to use end -->        
 
         <section id="plugins">
           <div class="page-header">
             <h1>Plugins <small>ready made plugin that use mywebfont</small></h1>
           </div>
           <div class="row">
-            <div class="span4 columns">
+            <div class="col-xs-4">
                 <h2>List</h2>
                 MyWebFont have following plugins
                 <ul>
@@ -193,7 +196,7 @@
                     <li>Vanilla 2</li>
                 </ul>
             </div>
-            <div class="span12 columns">
+            <div class="col-xs-8">
                 <h3>About Plugins</h3>
                 <h4><a href="http://wordpress.org/extend/plugins/mmunicode-embed/">Wordpress (Saturngod)</a></h4>
                 <p>This plugin will add mywebfont link at the header of the wordpress site. You can choose font family in the admin panel.</p>
@@ -287,5 +290,14 @@
 	      prettyPrint();
 	   });
 	});
+
+$('.navbar li').click(function(e) {
+$('.navbar li').removeClass('active');
+var $this = $(this);
+if (!$this.hasClass('active')) {
+$this.addClass('active');
+}
+e.preventDefault();
+});
     </script>
 </html>
